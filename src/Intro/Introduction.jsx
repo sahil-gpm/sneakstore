@@ -54,6 +54,8 @@ const Introduction = () => {
           Get your favourite sneakers
         </motion.button>
 
+        <br />
+
         <Link to={"https://github.com/sahil-gpm/sneakstore"} target="_blank">
           <motion.button
             initial={{ opacity: 0, x: -25 }}
@@ -62,7 +64,7 @@ const Introduction = () => {
             className=" bg-gray-400 mt-3 text-base font-semibold px-6 py-3 mt-rounded-md"
             onClick={() => navigate("/products")}
           >
-            Github Link to project
+            Github link to the project
           </motion.button>
         </Link>
       </div>
