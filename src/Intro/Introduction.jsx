@@ -1,11 +1,10 @@
 import React from "react";
 import main from "../assets/main.avif";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Introduction = () => {
-
-  const navigate = useNavigate("/")
+  const navigate = useNavigate("/");
 
   return (
     <div className="intro-wrapper text-center">
@@ -24,8 +23,8 @@ const Introduction = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0,x : -25 }}
-          animate={{ opacity: 1,x: 0 }}
+          initial={{ opacity: 0, x: -25 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           className="main-head text-center font-semibold text-4xl lg:text-5xl mt-4"
         >
@@ -33,10 +32,10 @@ const Introduction = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0,x : -25 }}
-          animate={{ opacity: 1,x: 0 }}
+          initial={{ opacity: 0, x: -25 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="description text-center text-sm text-gray-800 w-[80%] xl:w-1/2 mx-auto mt-10"
+          className="description text-center text-sm text-gray-800 w-[78%] xl:w-1/2 mx-auto mt-10"
         >
           Step into the world of footwear fashion at SneakStore. Explore a
           curated collection featuring everything from trendy sneakers to classy
@@ -46,14 +45,26 @@ const Introduction = () => {
         </motion.div>
 
         <motion.button
-          initial={{ opacity: 0,x : -25 }}
-          animate={{ opacity: 1,x: 0 }}
+          initial={{ opacity: 0, x: -25 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.8 }}
           className=" bg-yellow-400 mt-10 text-base font-semibold px-6 py-3 rounded-md"
-          onClick={()=>navigate("/products")}
+          onClick={() => navigate("/products")}
         >
           Get your favourite sneakers
         </motion.button>
+
+        <Link to={"https://vercel.com/sahil-gpms-projects/sneakstore"} target="_blank">
+          <motion.button
+            initial={{ opacity: 0, x: -25 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.8 }}
+            className=" bg-gray-400 mt-3 text-base font-semibold px-6 py-3 mt-rounded-md"
+            onClick={() => navigate("/products")}
+          >
+            Github Link to project
+          </motion.button>
+        </Link>
       </div>
     </div>
   );

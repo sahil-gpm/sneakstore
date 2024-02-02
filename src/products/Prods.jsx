@@ -19,7 +19,12 @@ const Prods = () => {
       )}
 
       <div className="w-[90%] mx-auto">
-        <motion.div initial={{opacity:0,y:50}} animate={{opacity:1,y:0}} transition={{duration:.8}} className="heading font-semibold text-4xl w-[90%] mx-auto mt-[5%] text-yellow-500 flex flex-col xl:flex-row justify-between ">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="heading font-semibold text-4xl w-[90%] mx-auto mt-[5%] text-yellow-500 flex flex-col xl:flex-row justify-between "
+        >
           <div className="text-center lg:text-start">
             Sneakstore 🛒
             <div className="subheading text-sm text-slate-800 mx-8 lg:mx-0">
