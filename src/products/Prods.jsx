@@ -18,13 +18,6 @@ const Prods = () => {
         />
       )}
 
-      {/* if data is empty due to applied filters  */}
-      {
-        data.length === 0 && <div className="mt-[20%] text-slate-800 font-seibold text-3xl mx-auto text-center py-8 px-16">
-          No shoes found ❌
-        </div>
-      }
-
       <div className="w-[90%] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -59,6 +52,13 @@ const Prods = () => {
               Clear filters
             </button>
           </div>
+
+          {/* if data is empty due to applied filters  */}
+          {data.length === 0 && (
+            <div className="mt-[20%] text-slate-800 font-seibold text-3xl mx-auto text-center py-8 px-16">
+              No shoes found ❌
+            </div>
+          )}
         </motion.div>
 
         {/* Mapping the products */}
