@@ -35,7 +35,7 @@ const Introduction = () => {
           initial={{ opacity: 0, x: -25 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="description text-center text-sm text-gray-800 w-[78%] xl:w-1/2 mx-auto mt-10"
+          className="description text-center text-sm text-gray-800 w-3/4 xl:w-1/2 mx-auto mt-10"
         >
           Step into the world of footwear fashion at SneakStore. Explore a
           curated collection featuring everything from trendy sneakers to classy
