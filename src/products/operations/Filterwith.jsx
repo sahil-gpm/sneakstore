@@ -76,7 +76,7 @@ const Filterwith = ({ data, setData, onCancel }) => {
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.9 }}
-      className="xl:w-[45%] w-[92%] absolute z-10 left-0 top-0 p-10 xl:p-14 overflow-y-scroll bg-yellow-100 h-[100vh]"
+      className="xl:w-[45%] w-[92%] absolute z-10 left-0 top-0 p-10 xl:p-14 overflow-y-scroll bg-gray-50 h-[100vh]"
     >
       <button
         className="absolute right-5 rounded-full text-xs font-semibold text-white top-5"
