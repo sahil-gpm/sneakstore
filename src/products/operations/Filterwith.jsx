@@ -3,19 +3,22 @@ import maindata from "../../demo.json";
 import { motion } from "framer-motion";
 
 const Filterwith = ({ data, setData, onCancel }) => {
-  const [filterData, setFilterData] = useState(data);
-  const [brand, setBrand] = useState([]);
-  const [color, setColor] = useState([]);
-  const [material, setMaterial] = useState([]);
-  const [type, setType] = useState([]);
 
-  const brandsArray = Array.from(new Set(filterData.map((shoe) => shoe.brand)));
-  const colorsArray = Array.from(new Set(filterData.map((shoe) => shoe.color)));
-  const materialsArray = Array.from(
-    new Set(filterData.map((shoe) => shoe.material))
-  );
-  const typesArray = Array.from(new Set(filterData.map((shoe) => shoe.type)));
+  //required states 
+  const [filterData, setFilterData] = useState(data); //hold the data to be filtered
+  const [brand, setBrand] = useState([]); // holds the filtered brands
+  const [color, setColor] = useState([]); // holds the filtered colors
+  const [material, setMaterial] = useState([]); // holds the filtered material
+  const [type, setType] = useState([]); // holds the filtered types
 
+  //getting unique values from each filter 
+  const brandsArray = Array.from(new Set(filterData.map((shoe) => shoe.brand))); //all brands
+  const colorsArray = Array.from(new Set(filterData.map((shoe) => shoe.color))); //all colors
+  const materialsArray = Array.from(new Set(filterData.map((shoe) => shoe.material))); //all materials
+  const typesArray = Array.from(new Set(filterData.map((shoe) => shoe.type)));// all types
+
+
+  //function to handle brand filters
   const handleBrand = (b) => {
     if (brand.includes(b)) {
       //remove the brand from filters
@@ -26,6 +29,7 @@ const Filterwith = ({ data, setData, onCancel }) => {
     setBrand((prev) => [...prev, b]);
   };
 
+  //function to handle color filters
   const handleColor = (c) => {
     if (color.includes(c)) {
       //remove the color from filters
@@ -36,6 +40,7 @@ const Filterwith = ({ data, setData, onCancel }) => {
     setColor((prev) => [...prev, c]);
   };
 
+  //function to handle material filters
   const handleMaterial = (m) => {
     if (material.includes(m)) {
       //remove the material from filters
@@ -46,6 +51,7 @@ const Filterwith = ({ data, setData, onCancel }) => {
     setMaterial((prev) => [...prev, m]);
   };
 
+  //function to handle type filters
   const handleType = (t) => {
     if (type.includes(t)) {
       //remove the brand from filters
@@ -97,7 +103,7 @@ const Filterwith = ({ data, setData, onCancel }) => {
                 type,
               });
               setData(res);
-              onCancel()
+              onCancel();
             }}
           >
             Apply filters
