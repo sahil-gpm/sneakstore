@@ -54,7 +54,7 @@ const Introduction = () => {
           Get your favourite sneakers
         </motion.button>
 
-        <Link to={"https://vercel.com/sahil-gpms-projects/sneakstore"} target="_blank">
+        <Link to={"https://github.com/sahil-gpm/sneakstore"} target="_blank">
           <motion.button
             initial={{ opacity: 0, x: -25 }}
             animate={{ opacity: 1, x: 0 }}
