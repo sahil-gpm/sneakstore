@@ -61,7 +61,7 @@ const Introduction = () => {
             initial={{ opacity: 0, x: -25 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className=" bg-gray-400 mt-3 text-base font-semibold px-6 py-3 mt-rounded-md"
+            className=" bg-gray-400 mt-3 text-base font-semibold px-6 py-3 rounded-md"
             onClick={() => navigate("/products")}
           >
             Github link to the project
